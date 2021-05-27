@@ -1,0 +1,52 @@
+#Colors (Ayu Dark)
+colors:
+  # Default colors
+  primary:
+    background: '#202020'
+    foreground: '#39EA49'
+
+  # Normal colors
+  normal:
+    black:   '#000000'
+    red:     '#F25056'
+    green:   '#39EA49'
+    yellow:  '#FAC536'
+    blue:    '#FAC536'
+    magenta: '#D12EEB'
+    cyan:    '#D12EEB'
+    white:   '0xC7C7C7'
+
+  # Bright colors
+  bright:
+    black:   '0x686868'
+    red:     '0xF07178'
+    green:   '0xC2D94C'
+    yellow:  '0xFFB454'
+    blue:    '0x59C2FF'
+    magenta: '0xFFEE99'
+    cyan:    '0x95E6CB'
+    white:   '0xFFFFFF'
+
+font:
+  # The normal (roman) font face to use.
+  normal:
+    family: Jetbrains Mono 
+    # Style can be specified to pick a specific face.
+    style: Regular
+
+  # The bold font face
+  bold:
+    family: JetBrains Mono
+    # Style can be specified to pick a specific face.
+    style: Bold
+
+  # The italic font face
+  italic:
+    family: JetBrains Mono
+    # Style can be specified to pick a specific face.
+    style: Italic
+
+  size: 13.0
+
+env:
+  WINIT_X11_SCALE_FACTOR: '1.0'
