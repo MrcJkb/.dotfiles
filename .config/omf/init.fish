@@ -15,6 +15,7 @@ alias code="codium"
 alias vim="nvim"
 alias te="nvim -c \":te\""
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias win10='./$HOME/sh/wi10.sh"
 
 begin
   set --local AUTOJUMP_PATH $HOME/.autojump/share/autojump/autojump.fish
