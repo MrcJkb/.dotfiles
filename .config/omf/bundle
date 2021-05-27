@@ -1,0 +1,10 @@
+package autojump
+package bass
+package battery
+package fzf
+theme agnoster
+theme clearance
+theme default
+theme robbyrussell
+theme shellder
+theme slacker
