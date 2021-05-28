@@ -1,5 +1,5 @@
 alias bd="prevd"
-alias fd="nextd"
+alias nd="nextd"
 alias gradle="gw"
 alias exa="exa --icons --git"
 alias ls="exa --icons --git"
