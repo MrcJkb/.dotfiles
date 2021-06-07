@@ -1,0 +1,28 @@
+IMAPAccount work
+# Address to connect to
+Host 127.0.0.1
+Port 1143
+User marc.jakobi@xchange.velasolaris.com
+PassCmd "keepassxc-get.sh https://bmail3.sui-inter.net marc.jakobi@xchange.velasolaris.com"
+SSLType None
+AuthMechs LOGIN
+
+IMAPStore work-remote
+Account work
+
+MaildirStore work-local
+# Copy folder hierarchy
+Subfolders Verbatim
+# The trailing "/" is important
+Path ~/.mail/work/
+Inbox ~/.mail/work/Inbox
+
+Channel work
+Far :work-remote:
+Near :work-local:
+# Include everything
+Patterns *
+# Automatically create missing mailboxes, both locally and on the server
+Create Both
+# Save the synchronization state files in the relevant directory
+SyncState *
