@@ -1,10 +1,10 @@
 IMAPAccount work
 # Address to connect to
-Host 127.0.0.1
-Port 1143
+Host bmail3.sui-inter.net # 127.0.0.1
+Port 993 # 1143
 User marc.jakobi@xchange.velasolaris.com
 PassCmd "keepassxc-get.sh https://bmail3.sui-inter.net marc.jakobi@xchange.velasolaris.com"
-SSLType None
+SSLType IMAPS
 AuthMechs LOGIN
 
 IMAPStore work-remote
