@@ -18,6 +18,7 @@ alias te="nvim -c \":te\""
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias win10="./$HOME/sh/wi10.sh"
 alias mbsync="mbsync -c \"$XDG_CONFIG_HOME/isync/mbsyncrc\""
+alias nvim-rebuild="rm ~/.cache/paru/clone/neovim-nightly-bin/ -rf && paru --rebuild --redownload neovim-nightly-bin"
 
 begin
   set --local AUTOJUMP_PATH $HOME/.autojump/share/autojump/autojump.fish
