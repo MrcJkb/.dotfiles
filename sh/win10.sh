@@ -1,8 +1,6 @@
 #!/bin/sh
 exec qemu-system-x86_64 -enable-kvm \
         -cpu host \
-        # -boot d \
-        # -cdrom $HOME/Downloads/gparted-live-1.3.0-1-i686.iso \
         -drive file=$HOME/virtual-machines/win10.qcow2,if=virtio \
         -net nic -net user,hostname=windowsvm,smb=$HOME \
         -m 8192 \
@@ -14,3 +12,6 @@ exec qemu-system-x86_64 -enable-kvm \
         -device intel-hda -device hda-output,audiodev=snd0 \
         -rtc base=localtime,clock=host \
         "$@"
+# To boot from a gparted live CD, uncomment the below lines and add them as exec parameters
+        # -boot d \
+        # -cdrom $HOME/Downloads/gparted-live-1.3.0-1-i686.iso \
