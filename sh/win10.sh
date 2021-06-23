@@ -1,8 +1,8 @@
 #!/bin/sh
 exec qemu-system-x86_64 -enable-kvm \
         -cpu host \
-        -boot menu=on
-        -cdrom $HOME/Downloads/gparted-live-1.3.0-1-i686.iso \
+        # -boot d \
+        # -cdrom $HOME/Downloads/gparted-live-1.3.0-1-i686.iso \
         -drive file=$HOME/virtual-machines/win10.qcow2,if=virtio \
         -net nic -net user,hostname=windowsvm,smb=$HOME \
         -m 8192 \
