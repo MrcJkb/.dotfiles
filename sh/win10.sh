@@ -3,7 +3,7 @@ exec qemu-system-x86_64 -enable-kvm \
         -cpu host \
         -drive file=$HOME/virtual-machines/win10.qcow2,if=virtio \
         -net nic -net user,hostname=windowsvm,smb=$HOME \
-        -m 8192 \
+        -m 4096 \
         -vga virtio \
         -display gtk,gl=on \
         -monitor stdio \
