@@ -54,4 +54,6 @@ bass source $HOME/.profile
 bass source $HOME/.sdkman/bin/sdkman-init.sh
 set fish_greeting ""
 
+# Starship theme (requires starship)
+starship init fish | source
 # neofetch --disable cpu gpu

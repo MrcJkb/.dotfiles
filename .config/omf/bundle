@@ -5,6 +5,4 @@ package fzf
 theme agnoster
 theme clearance
 theme default
-theme robbyrussell
-theme shellder
 theme slacker
