@@ -2,12 +2,16 @@
 	email = marc.jakobi@velasolaris.com
 	name = Marc Jakobi
 
-[mergetool "nvim"]
-  cmd = nvim -f -c \"Gdiffsplit!\" \"$MERGED\"
 [merge]
-  tool = nvim
-[mergetool]
-  prompt = false
+    tool = vscodium
+[mergetool "vscodium"]
+    cmd = codium --wait $MERGED
+; [mergetool "nvim"]
+;   cmd = nvim -f -c \"Gdiffsplit!\" \"$MERGED\"
+; [merge]
+;   tool = nvim
+; [mergetool]
+;   prompt = false
 
 [credential]
 	helper = keepassxc
