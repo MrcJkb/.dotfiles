@@ -17,7 +17,7 @@ alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias win10="./$HOME/sh/wi10.sh"
 alias mbsync="mbsync -c $XDG_CONFIG_HOME/isync/mbsyncrc"
 alias nvim-rebuild="rm ~/.cache/paru/clone/neovim-nightly-bin/ -rf && paru --rebuild --redownload neovim-nightly-bin"
-if test -e $NVIM_LISTEN_ADDRESS
+if test -e "$NVIM_LISTEN_ADDRESS"
   alias nvim="nvr"
   alias vim="nvr"
   alias te="nvr -c \":te\""
@@ -28,8 +28,8 @@ end
 
 begin
   set --local AUTOJUMP_PATH $HOME/.autojump/share/autojump/autojump.fish
-  if test -e $AUTOJUMP_PATH
-    source $AUTOJUMP_PATH
+  if test -e "$AUTOJUMP_PATH"
+    source "$AUTOJUMP_PATH"
   end
 end
 
