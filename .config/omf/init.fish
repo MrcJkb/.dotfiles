@@ -47,15 +47,15 @@ fish_vi_key_bindings
 if status is-login
   if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
     xmonad --recompile
+    # xrandr --newmode "5120x1440_30.00"  293.23  5120 5360 5896 6672  1440 1441 1444 1465  -HSync +Vsync
+    # xrandr --addmode DP1 "5120x1440_30.00"
     exec startx -- -keeptty
   end
   # Set keymap to us altgr-intl if Atreus is connected
   set -l atreus_output (lsusb | grep Atreus)
-  if not test -z "$atreus_output"
+  if test -n "$atreus_output"
     setxkbmap us altgr-intl
   end
-  xrandr --newmode "5120x1440_30.00"  293.23  5120 5360 5896 6672  1440 1441 1444 1465  -HSync +Vsync
-  xrandr --addmode DP1 "5120x1440_30.00"
 end
 
 bass source $HOME/.profile
