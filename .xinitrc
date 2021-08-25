@@ -33,5 +33,5 @@ fi
 
 /home/mrcjk/sh/nextcloud-background.sh &
 
-exec xmobar
+exec xmobar &
 exec xmonad
