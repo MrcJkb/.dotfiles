@@ -38,8 +38,18 @@ Config {
    , commands = 
 
         -- weather monitor
-        [ Run Weather "LSZH" [ "--template", "<skyCondition> | <fc=#FAC536><tempC></fc>°C | <fc=#FAC536><rh></fc>% | <fc=#FAC536><pressure></fc>hPa"
+        [ Run Weather "LSZH" [ "--template", "<skyCondition> | <station>: <fc=#FAC536><tempC></fc>°C | <fc=#FAC536><rh></fc>% | <fc=#FAC536><pressure></fc>hPa"
                              ] 36000
+
+        , Run Brightness [ "-t", "Br: <percent>%", "--", "-D", "intel_backlight" ] 60
+
+        , Run Volume "default" "Master"
+            [ "-t", "<status>", "--"
+            , "--on", "<fc=#859900><fn=1>\xf028</fn> <volume>%</fc>"
+            , "--onc", "#859900"
+            , "--off", "<fc=#dc322f><fn=1>\xf026</fn> MUTE</fc>"
+            , "--offc", "#dc322f"
+            ] 10
 
         -- network activity monitor (dynamic interface resolution)
         , Run DynNetwork     [ "--template" , "<dev>: <tx>kB/s|<rx>kB/s"
