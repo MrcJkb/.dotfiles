@@ -11,7 +11,7 @@ Config {
    -- layout
    , sepChar =  "%"   -- delineator between plugin names and straight text
    , alignSep = "}{"  -- separator between left-right alignment
-   , template = "%battery% | %multicpu% | %coretemp% | %memory% | %dynnetwork% }{ %RJTT% | %date% || %kbd% "
+   , template = "%battery% | %multicpu% | %coretemp% | %memory% | %dynnetwork% }{ %LSZH% | %date% || %kbd% "
 
    -- general behavior
    , lowerOnStart =     True    -- send to bottom of window stack on start
@@ -38,7 +38,7 @@ Config {
    , commands = 
 
         -- weather monitor
-        [ Run Weather "RJTT" [ "--template", "<skyCondition> | <fc=#FAC536><tempC></fc>°C | <fc=#FAC536><rh></fc>% | <fc=#FAC536><pressure></fc>hPa"
+        [ Run Weather "LSZH" [ "--template", "<skyCondition> | <fc=#FAC536><tempC></fc>°C | <fc=#FAC536><rh></fc>% | <fc=#FAC536><pressure></fc>hPa"
                              ] 36000
 
         -- network activity monitor (dynamic interface resolution)
