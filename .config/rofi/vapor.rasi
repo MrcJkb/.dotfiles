@@ -20,6 +20,7 @@
     selected-normal-foreground:  rgba ( 255, 255,  255, 100 % );
     selected-active-foreground:  rgba ( 180, 144,  82, 100 % );
     border-color:                rgba ( 57, 234, 73, 100 % );
+    text-color:                  rgba ( 57, 234, 73, 100 % );
     spacing:                     2;
     separatorcolor:              none;
     urgent-background:           rgba ( 255, 255, 255, 100 % );
@@ -30,7 +31,7 @@
     active-background:           rgba ( 255, 255, 255, 100 % );
     selected-active-background:  rgba ( 82, 148, 226, 100 % );
 
-	font: "Roboto Mono 13";
+	font: "JetBrains Mono 12";
 }
 #window {
     background-color: @background;
