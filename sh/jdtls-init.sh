@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-GRADLE_HOME=$HOME/.gradle $JAVA_HOME/bin/java \
+GRADLE_HOME=$HOME/.gradle /usr/lib/jvm/liberica-jdk-16-full/bin/java \
   -Declipse.application=org.eclipse.jdt.ls.core.id1 \
   -Dosgi.bundles.defaultStartLevel=4 \
   -Declipse.product=org.eclipse.jdt.ls.core.product \
