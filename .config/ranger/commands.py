@@ -43,6 +43,14 @@ class NewJavaInterface(CreateJavaFileCommand):
         interface_definition = "public interface " + interface_name + " {\n}"
         self.create_java_file(interface_name, interface_definition)
 
+class NewJavaRecord(CreateJavaFileCommand):
+    def execute(self):
+        if not self.arg(1):
+            return
+        record_name = self.arg(1)
+        record_definition = "public record " + record_name + "() {\n}"
+        self.create_java_file(record_name, record_definition)
+
 class NewJavaFunctionalInterface(CreateJavaFileCommand):
     def execute(self):
         if not self.arg(1):
