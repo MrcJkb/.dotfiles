@@ -69,12 +69,15 @@ class NewJavaClass(CreateJavaFileCommand):
 
 def get_haskell_module_prefix(directory: Directory) -> str:
     prefix = directory.path.replace(os.path.sep, ".")
+    sub = prefix.split("lib.", 1)
+    if len(sub) > 1:
+        return sub[1] + "."
     sub = prefix.split("src.", 1)
     if len(sub) > 1:
-        return sub[1]
+        return sub[1] + "."
     sub = prefix.split("test.", 1)
     if len(sub) > 1:
-        return sub[1]
+        return sub[1] + "."
     return ""
 
 class NewHaskellModule(Command):
@@ -84,7 +87,7 @@ class NewHaskellModule(Command):
         file_name = self.arg(1)
         cwd = self.fm.thisdir
         file_path = os.path.join(cwd.path, file_name + ".hs")
-        module_name = get_haskell_module_prefix(cwd) + "." + file_name
+        module_name = get_haskell_module_prefix(cwd) + file_name
         module_line = "module " + module_name + "() where\n\n"
         with open(file_path,"w") as file:
             file.write(module_line)
