@@ -1,4 +1,3 @@
-package autojump
 package bass
 package battery
 package fzf
