@@ -1,6 +1,7 @@
 source "${HOME}/.cargo/env"
 # export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
 export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
 export KALEIDOSCOPE_DIR="$HOME/git/forks/Kaleidoscope"
 export KALEIDOSCOPE_LANGUAGES_DIR="$HOME/git/forks/Kaleidoscope-Languages"
 # export JAR="${HOME}/git/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository/plugins/org.eclipse.equinox.launcher_*.jar"
