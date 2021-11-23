@@ -48,7 +48,6 @@ fish_vi_key_bindings
 # Start X at login
 if status is-login
   if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
-    xmonad --recompile
     # xrandr --newmode "5120x1440_30.00"  293.23  5120 5360 5896 6672  1440 1441 1444 1465  -HSync +Vsync
     # xrandr --addmode DP1 "5120x1440_30.00"
     exec startx -- -keeptty

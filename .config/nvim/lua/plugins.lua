@@ -14,8 +14,6 @@ return require('packer').startup(function(use)
 
   use { 
     'weirongxu/plantuml-previewer.vim',
-    opt = true,
-    ft = { 'puml' },
     requires = {
       'tyru/open-browser.vim',
       'aklt/plantuml-syntax',
@@ -71,6 +69,8 @@ return require('packer').startup(function(use)
 
   use 'tpope/vim-dispatch' 
   use 'tpope/vim-obsession' -- Automatic session management
+  use 'tpope/vim-surround' -- Add "surroundings text-object cammands"
+
   use 'udalov/kotlin-vim' -- Highlighting for Kotlin. Also required for Kotlin LSP support
   
   -- Material colort theme
@@ -109,11 +109,22 @@ return require('packer').startup(function(use)
   use 'hrsh7th/vim-vsnip-integ'
 
   use { 
+    'folke/zen-mode.nvim', -- Adds a :ZenMode
+    config = function()
+      require("zen-mode").setup( {
+          backdrop = 1,
+        })
+    end
+  }
+
+  use { 
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
   use 'nvim-treesitter/nvim-treesitter-textobjects' -- Treesitter-based text objects
   use 'p00f/nvim-ts-rainbow' -- Rainbow brackets (needs nvim-treesitter)
+
+  use 'folke/twilight.nvim' -- Dim inactive potions of code (powered by TreeSitter)
 
   use 'mfussenegger/nvim-jdtls' -- Java LSP support
   use 'mfussenegger/nvim-dap' -- Debug Adapter Protocol
@@ -130,7 +141,10 @@ return require('packer').startup(function(use)
   use 'norcalli/snippets.nvim' -- Snippet support
   use 'SirVer/ultisnips'
 
-  use 'nvim-lua/popup.nvim'
+  use {
+    'nvim-lua/popup.nvim',
+    requires = { 'nvim-lua/plenary.nvim' }
+  }
 
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-fzy-native.nvim'
@@ -169,7 +183,6 @@ return require('packer').startup(function(use)
   -- rangr client
   use {
     'kevinhwang91/rnvimr', 
-    run = 'make sync'
   }
 
   use 'kyazdani42/nvim-web-devicons'
@@ -177,5 +190,14 @@ return require('packer').startup(function(use)
 
   -- Wrapper for toggling NeoVim terminals
   use "akinsho/toggleterm.nvim"
+
+  -- Specify, or on the fly, mark and create persisting key strokes to go to the files you want.
+  -- + Unlimiter terminals and navigation
+  use {
+    'ThePrimeagen/harpoon',
+    requires = { 'nvim-lua/plenary.nvim' }
+  }
+
+  use 'windwp/nvim-autopairs'
 
 end)

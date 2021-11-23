@@ -137,8 +137,6 @@ let g:markdown_syntax_conceal = 0
 " Align GitHub-flavored Markdown tables
 au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
 
-let g:dap_virtual_ext = v:true
-
 "vim-wordmotion
 let g:wordmotion_mappings = {
 \ 'w' : '<M-w>',
@@ -252,6 +250,9 @@ inoremap <c-k> <cmd>lua return require'snippets'.expand_or_advance(1)<CR>
 " If you jump before the first field, it will cancel the snippet.
 inoremap <c-j> <cmd>lua return require'snippets'.advance_snippet(-1)<CR>
 " ------------------- Snippets.nvim ---------------------------
+"  -- ZenMode keybinding
+lua vim.api.nvim_set_keymap('n', '<leader>z', ':ZenMode<Cr>', { noremap = true, silent = true })
+
 lua require('colorizer').setup()
 " External configs
 source $VIMCONFIG/vimscript/rnvimr.vim
@@ -266,3 +267,6 @@ lua require('treesitter-config')
 lua require('completion-config')
 lua require('lualine-setup')
 lua require('toggleterm-setup')
+lua require('twilight-config')
+lua require('autopairs-config')
+lua require('harpoon-config').setup()
