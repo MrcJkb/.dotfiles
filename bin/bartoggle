@@ -1,0 +1,8 @@
+#!/bin/bash
+if pgrep xmobar; then
+	pkill xmobar
+	exit 1
+else
+	exec xmobar &
+fi
+exit
