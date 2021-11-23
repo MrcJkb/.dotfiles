@@ -34,5 +34,4 @@ fi
 /home/mrcjk/sh/nextcloud-background.sh &
 
 export TZ='Europe/Berlin' 
-exec xmobar &
 exec xmonad
