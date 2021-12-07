@@ -1,5 +1,5 @@
 source "${HOME}/.cargo/env"
-# export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
+export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export KALEIDOSCOPE_DIR="$HOME/git/forks/Kaleidoscope"
