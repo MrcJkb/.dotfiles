@@ -61,6 +61,7 @@ end
 
 bass source $HOME/.profile
 bass source $HOME/.sdkman/bin/sdkman-init.sh
+bass source /etc/profile.d/nix{,-daemon}.sh
 set fish_greeting ""
 
 # Starship theme (requires starship)
