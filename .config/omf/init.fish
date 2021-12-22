@@ -61,7 +61,10 @@ end
 
 bass source $HOME/.profile
 #bass source $HOME/.sdkman/bin/sdkman-init.sh
-bass source /etc/profile.d/nix{,-daemon}.sh
+set --local NIX_DAEMON = /etc/profile.d/nix{,-daemon}.sh
+if test -e "$NIX_DAEMON"
+  bass source "$NIX_DAEMON"
+end
 set fish_greeting ""
 
 # Starship theme (requires starship)
