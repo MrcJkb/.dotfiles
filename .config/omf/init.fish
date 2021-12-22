@@ -13,7 +13,7 @@ alias lla="ls --icons --git -al"
 alias grep="rg"
 alias cat="bat --style=plain"
 alias code="codium"
-alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias config="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias win10="./$HOME/sh/wi10.sh"
 alias mbsync="mbsync -c $XDG_CONFIG_HOME/isync/mbsyncrc"
 alias nvim-rebuild="rm ~/.cache/paru/clone/neovim-nightly-bin/ -rf && paru --rebuild --redownload neovim-nightly-bin"
@@ -60,8 +60,11 @@ if status is-login
 end
 
 bass source $HOME/.profile
-bass source $HOME/.sdkman/bin/sdkman-init.sh
-bass source /etc/profile.d/nix{,-daemon}.sh
+#bass source $HOME/.sdkman/bin/sdkman-init.sh
+set --local NIX_DAEMON = /etc/profile.d/nix{,-daemon}.sh
+if test -e "$NIX_DAEMON"
+  bass source "$NIX_DAEMON"
+end
 set fish_greeting ""
 
 # Starship theme (requires starship)

@@ -15,3 +15,5 @@
 
 [credential]
 	helper = keepassxc
+[init]
+	defaultBranch = main
