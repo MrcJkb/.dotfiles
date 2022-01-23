@@ -26,3 +26,4 @@ export PATH="$PATH:$HOME/sh"
 export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:$JAVA_HOME/bin"
 export TZ="Europe/Berlin"
+export RANGER_ZLUA=/usr/share/z.lua/z.lua
