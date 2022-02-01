@@ -1,0 +1,32 @@
+if status is-interactive
+    # Commands to run in interactive sessions can go here
+    alias bd="prevd"
+    alias nd="nextd"
+    alias gradle="gw"
+    alias exa="exa --icons --git"
+    alias ls="exa --icons --git"
+    alias la="exa --icons --git -a"
+    alias ll="ls --icons --git -l"
+    alias lt="ls --icons --tree"
+    alias ltg="lt --git"
+    alias lta="lt -a"
+    alias ltl="lt -l"
+    alias lla="ls --icons --git -al"
+    alias grep="rg"
+    alias cat="bat --style=plain"
+    alias code="codium"
+    alias config="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+    alias win10="./$HOME/sh/wi10.sh"
+    alias mbsync="mbsync -c $XDG_CONFIG_HOME/isync/mbsyncrc"
+    alias nvim-rebuild="rm ~/.cache/paru/clone/neovim-nightly-bin/ -rf && paru --rebuild --redownload neovim-nightly-bin"
+    if test -e "$NVIM_LISTEN_ADDRESS"
+        alias nvim="nvr"
+        alias vim="nvr"
+        alias vi="nvr"
+        alias te="nvr -c \":te\""
+    else
+        alias vim="nvim"
+        alias vi="nvim"
+        alias te="nvim -c \":te\""
+    end
+end
