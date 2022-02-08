@@ -24,3 +24,5 @@ export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:$JAVA_HOME/bin"
 export TZ="Europe/Berlin"
 export RANGER_ZLUA=$(readlink -e $(which z))
+
+alias luamake=/home/mrcjk/.cache/nvim/nlua/sumneko_lua/lua-language-server/3rd/luamake/luamake
