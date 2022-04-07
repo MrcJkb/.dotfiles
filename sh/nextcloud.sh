@@ -4,9 +4,10 @@
 # and https://www.cogitri.dev/posts/03-keepassxc-freedesktop-secret/
 
 # 1 Configure KeePassXC + DB for Secret Service Integration
+# -> In DB settings, expose only Secret Service Integration group
 # 2 Add this script to autostart
 
-while ! $(secret-tool lookup Title "TheGoodCloud (NextCloud)" &> /dev/null); do
+while ! $(secret-tool lookup Title "Nextcloud" &> /dev/null); do
 	echo "wait"
 	sleep 1s
 done
