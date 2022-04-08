@@ -40,3 +40,5 @@ end
 # Starship theme (requires starship)
 starship init fish | source
 # neofetch --disable cpu gpu
+#
+fish-nix-shell --info-right | source
