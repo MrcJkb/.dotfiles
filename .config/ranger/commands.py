@@ -69,13 +69,13 @@ class NewJavaClass(CreateJavaFileCommand):
 
 def get_haskell_module_prefix(directory: Directory) -> str:
     prefix = directory.path.replace(os.path.sep, ".")
-    sub = prefix.split("lib.", 1)
-    if len(sub) > 1:
-        return sub[1] + "."
     sub = prefix.split("src.", 1)
     if len(sub) > 1:
         return sub[1] + "."
     sub = prefix.split("test.", 1)
+    if len(sub) > 1:
+        return sub[1] + "."
+    sub = prefix.split("lib.", 1)
     if len(sub) > 1:
         return sub[1] + "."
     return ""
