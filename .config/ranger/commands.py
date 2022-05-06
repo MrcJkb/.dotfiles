@@ -4,7 +4,8 @@ from ranger.api.commands import Command
 from ranger.container.directory import Directory
 
 def get_java_package_name(directory: Directory) -> str:
-    package = directory.path.replace(os.path.sep, ".")
+    path = directory.path or ""
+    package = path.replace(os.path.sep, ".")
     sub = package.split("main.java.", 1)
     if len(sub) > 1:
         return sub[1]
@@ -67,8 +68,8 @@ class NewJavaClass(CreateJavaFileCommand):
         interface_definition = "public class " + class_name + " {\n}"
         self.create_java_file(class_name, interface_definition)
 
-def get_haskell_module_prefix(directory: Directory) -> str:
-    prefix = directory.path.replace(os.path.sep, ".")
+def get_haskell_module_prefix(directory: str) -> str:
+    prefix = directory.replace(os.path.sep, ".")
     sub = prefix.split("src.", 1)
     if len(sub) > 1:
         return sub[1] + "."
@@ -84,10 +85,16 @@ class NewHaskellModule(Command):
     def execute(self):
         if not self.arg(1):
             return
-        file_name = self.arg(1)
+        module_name = self.arg(1)
+        module_splits = module_name.split(".")
+        file_name = module_splits[-1]
+        module_directories = os.path.join(*module_splits[:-1]) if len(module_splits) > 1 else ""
         cwd = self.fm.thisdir
-        file_path = os.path.join(cwd.path, file_name + ".hs")
-        module_name = get_haskell_module_prefix(cwd) + file_name
+        module_path = os.path.join(cwd.path, module_directories)
+        if not os.path.isdir(module_path):
+            os.makedirs(module_path)
+        file_path = os.path.join(module_path, file_name + ".hs")
+        module_name = get_haskell_module_prefix(module_path) + file_name
         module_line = "module " + module_name + "() where\n\n"
         with open(file_path,"w") as file:
             file.write(module_line)
