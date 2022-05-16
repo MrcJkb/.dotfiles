@@ -14,6 +14,10 @@ templates:
 #    copyright:
    github-username: MrcJkb
 
+ghc-options:
+  # May cause compilation failure on invalid Haddock markup (ghc < 9.0)
+  '$everything': -haddock
+
 # The following parameter specifies stack's output styles; STYLES is a
 # colon-delimited sequence of key=value, where 'key' is a style name and
 # 'value' is a semicolon-delimited list of 'ANSI' SGR (Select Graphic
