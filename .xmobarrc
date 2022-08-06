@@ -11,7 +11,7 @@ Config {
    -- layout
    , sepChar =  "%"   -- delineator between plugin names and straight text
    , alignSep = "}{"  -- separator between left-right alignment
-   , template = "%battery% | %multicpu% | %coretemp% | %memory% | %dynnetwork% }{ %LSZH% | %date% || %kbd% "
+   , template = "%XMonadLog% | %battery% | %multicpu% | %coretemp% | %memory% | %dynnetwork% }{ %LSZH% | %date% || %kbd% "
 
    -- general behavior
    , lowerOnStart =     True    -- send to bottom of window stack on start
@@ -50,6 +50,9 @@ Config {
             , "--off", "<fc=#dc322f><fn=1>\xf026</fn> MUTE</fc>"
             , "--offc", "#dc322f"
             ] 10
+
+        -- XMonad logs
+        , Run XMonadLog
 
         -- network activity monitor (dynamic interface resolution)
         , Run DynNetwork     [ "--template" , "<dev>: <tx>kB/s|<rx>kB/s"
