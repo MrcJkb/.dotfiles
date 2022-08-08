@@ -42,3 +42,4 @@ starship init fish | source
 # neofetch --disable cpu gpu
 #
 fish-nix-shell --info-right | source
+zoxide init fish | source
