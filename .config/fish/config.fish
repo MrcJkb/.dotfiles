@@ -1,5 +1,6 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
+    alias cd="z"
     alias bd="prevd"
     alias nd="nextd"
     alias gradle="gw"
