@@ -1,4 +1,4 @@
-export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
+# export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
 # export KALEIDOSCOPE_DIR="$HOME/git/github/forks/Kaleidoscope"
 # export KALEIDOSCOPE_LANGUAGES_DIR="$HOME/git/forks/Kaleidoscope-Languages"
 # export JAR="${HOME}/git/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository/plugins/org.eclipse.equinox.launcher_*.jar"
