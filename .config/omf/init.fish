@@ -5,13 +5,6 @@ begin
   end
 end
 
-function gitCheckPull
-  git checkout "$1" && git pull
-end
-
-function gitCheckPU
-  git checkout "$1" && git pull && git submodule update --init --force --recursive .
-end
 
 fish_vi_key_bindings
 
