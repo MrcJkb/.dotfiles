@@ -1,8 +1,1 @@
-* {
-  accent:           #5294E2;
-  background:       #FFFFFF;
-  background-light: #E7E8EB;
-  foreground:       #333333;
-  on:               #44ad4d;
-  off:              #e34039;
-}
+/nix/store/y39g00wbaqx660lpaxa5fjigqlamk11x-home-manager-files/.config/rofi/themes/colorschemes/arc.rasi

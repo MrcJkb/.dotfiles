@@ -1,9 +1,1 @@
-/** Configured For Applets **/
-
-configuration {
-  show-icons:         true;
-  icon-theme:         "Papirus";
-  location: 5;
-  yoffset: -50;
-  xoffset: -20;
-}
+/nix/store/y39g00wbaqx660lpaxa5fjigqlamk11x-home-manager-files/.config/rofi/config.rasi

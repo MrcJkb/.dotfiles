@@ -1,8 +1,1 @@
-if [ "$@" ]
-then
-	pid=$(printf "%d" $(echo -e "$@" | cut -d ":" -f 1))
-	echo "$pid"
-	kill "$pid"
-else
-	ps -U $UID --no-headers -o "%p: %c"
-fi
+/nix/store/y39g00wbaqx660lpaxa5fjigqlamk11x-home-manager-files/.config/rofi/scripts/kill.sh

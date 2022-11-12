@@ -1,8 +1,1 @@
-* {
-  accent:           #656565;
-  background:       #C6C6C4;
-  background-light: #FFFFFF;
-  foreground:       #909090;
-  on:               #226827;
-  off:              #682226;
-}
+/nix/store/y39g00wbaqx660lpaxa5fjigqlamk11x-home-manager-files/.config/rofi/themes/colorschemes/minimo.rasi

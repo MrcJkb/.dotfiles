@@ -1,8 +1,1 @@
-* {
-  accent:           #E85A50;
-  background:       #EAE8DC;
-  background-light: #E4D9C8;
-  foreground:       #8E8D89;
-  on:               #66bb6a;
-  off:              #F68887;
-}
+/nix/store/y39g00wbaqx660lpaxa5fjigqlamk11x-home-manager-files/.config/rofi/themes/colorschemes/armchair.rasi

@@ -1,8 +1,1 @@
-* {
-  accent:           #F75176;
-  background:       #414656;
-  background-light: #4B5060;
-  foreground:       #F2F7E3;
-  on:               #CDF0D9;
-  off:              #FF796A;
-}
+/nix/store/y39g00wbaqx660lpaxa5fjigqlamk11x-home-manager-files/.config/rofi/themes/colorschemes/darkpink.rasi

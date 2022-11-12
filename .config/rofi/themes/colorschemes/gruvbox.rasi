@@ -1,8 +1,1 @@
-* {
-  accent:           #83a598;
-  background:       #282828;
-  background-light: #303030;
-  foreground:       #ebdbb2;
-  on:               #44ad4d;
-  off:              #fb4934;
-}
+/nix/store/y39g00wbaqx660lpaxa5fjigqlamk11x-home-manager-files/.config/rofi/themes/colorschemes/gruvbox.rasi

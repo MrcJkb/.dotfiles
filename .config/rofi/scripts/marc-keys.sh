@@ -1,3 +1,1 @@
-#!/usr/bin/env bash
-python ~/.config/rofi/scripts/rofi-keepass/rofi-keepass.py --database ~/NextCloud/Keepass/marc_keys.kdbx --keyfile ~/.sec/marc_keys.keyx
-
+/nix/store/y39g00wbaqx660lpaxa5fjigqlamk11x-home-manager-files/.config/rofi/scripts/marc-keys.sh
